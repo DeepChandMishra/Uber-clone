@@ -57,7 +57,7 @@ module.exports.logoutUser=async (req,res,next)=>{
     const token = req.cookies.token || req.headers.authorization.split(' ')[1];
     await blacklistToken.create({token});
 
-    res.status(201).json({message :'logout'})
+    res.status(200).json({message :'logout'})
 }
 
 
